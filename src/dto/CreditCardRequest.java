@@ -3,34 +3,33 @@ package dto;
 import model.CardType;
 
 public class CreditCardRequest {
-    private int cardCvv;
-    private int cardExpirationYear;
-    private int getCardExpirationMonth;
+    private String cardCvv;
+    private String cardExpirationYear;
+    private String getCardExpirationMonth;
     private String cardName;
     private CardType cardType;
-    private int creditCardNumber;
 
-    public int getCardCvv() {
+    public String getCardCvv() {
         return cardCvv;
     }
 
-    public void setCardCvv(int cardCvv) {
+    public void setCardCvv(String cardCvv) {
         this.cardCvv = cardCvv;
     }
 
-    public int getCardExpirationYear() {
+    public String getCardExpirationYear() {
         return cardExpirationYear;
     }
 
-    public void setCardExpirationYear(int cardExpirationYear) {
+    public void setCardExpirationYear(String cardExpirationYear) {
         this.cardExpirationYear = cardExpirationYear;
     }
 
-    public int getGetCardExpirationMonth() {
+    public String getGetCardExpirationMonth() {
         return getCardExpirationMonth;
     }
 
-    public void setGetCardExpirationMonth(int getCardExpirationMonth) {
+    public void setGetCardExpirationMonth(String getCardExpirationMonth) {
         this.getCardExpirationMonth = getCardExpirationMonth;
     }
 
@@ -50,13 +49,16 @@ public class CreditCardRequest {
         this.cardType = cardType;
     }
 
-    public int getCreditCardNumber() {
+    public String getCreditCardNumber() {
         return creditCardNumber;
     }
 
-    public void setCreditCardNumber(int creditCardNumber) {
+    public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
+
+    private String creditCardNumber;
+
 
 
 }

@@ -15,6 +15,17 @@ public class AppUser {
     private Users role;
     private LocalDate dateCreated;
 
+    private boolean isLocked = false;
+    public boolean isLocked() {
+        return isLocked;
+    }
+
+    public void setLocked(boolean locked) {
+       this.isLocked = locked;
+    }
+
+
+
     public LocalDate getDateCreated() {
         return dateCreated;
     }

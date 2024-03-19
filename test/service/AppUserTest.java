@@ -73,5 +73,12 @@ class AppUserTest {
         assertEquals(2,appUserService.getNumberOfCustomer());
     }
 
+    @Test
+    void  testForLogin(){
+        appUserService.registerCustomer(registerCustomerRequest);
+        appUserService.login("chichi","1234");
+        assertEquals(1,appUserService.findAppUserByEmail("chichi@gmail.com"));
+    }
+
 
 }

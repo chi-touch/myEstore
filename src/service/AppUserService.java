@@ -26,6 +26,7 @@ public class AppUserService {
         appUser.setDateCreated(LocalDate.now());
         appUser.setPhoneNumber(registerCustomerRequest.getPhoneNumber());
         appUser.setAge(registerCustomerRequest.getAge());
+
         return appUser;
     }
 
@@ -57,5 +58,14 @@ public class AppUserService {
         return appUserStorage.countCustomer();
     }
 
+
+    public boolean login(String userName, String passWord) {
+      AppUser foundAppUser = findAppUserByEmail(userName);
+      if (!passWord.equalsIgnoreCase(passWord)){
+          throw new RuntimeException("incorrect password");
+      }
+     foundAppUser.setLocked(true);
+   return  foundAppUser.isLocked();
+    }
 
 }

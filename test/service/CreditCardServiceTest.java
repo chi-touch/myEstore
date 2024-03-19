@@ -2,8 +2,11 @@ package service;
 
 import dto.CreditCardRequest;
 import model.CardType;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 class CreditCardServiceTest {
 
@@ -18,14 +21,19 @@ class CreditCardServiceTest {
         creditCardRequest = new CreditCardRequest();
         creditCardRequest.setCardName("chichi");
         creditCardRequest.setCardType(CardType.MASTERCARD);
-        creditCardRequest.setCardExpirationYear(2024);
+        creditCardRequest.setCardExpirationYear("2024");
+        creditCardRequest.setCardCvv("123");
+        creditCardRequest.setCreditCardNumber("123456789012345");
+        creditCardRequest.setGetCardExpirationMonth("july");
 
     }
 
     @Test
     public void testToComfirmCreditCard(){
-        creditCardService.ifCardExit("chichi");
-        creditCardService.collectCardInformation(CardType.MASTERCARD);
+
+        assertDoesNotThrow(()->{
+            creditCardService.collectCardInformation(creditCardRequest);
+        });
     }
 
 }

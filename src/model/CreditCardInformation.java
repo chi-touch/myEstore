@@ -1,13 +1,35 @@
 package model;
 
 public class CreditCardInformation {
-    private int cardCvv;
-    private int cardExpirationYear;
-    private int getCardExpirationMonth;
+    private String cardCvv;
+    private String cardExpirationYear;
+    private String getCardExpirationMonth;
     private String cardName;
     private CardType cardType;
-    private int creditCardNumber;
 
+    public String getCardCvv() {
+        return cardCvv;
+    }
+
+    public void setCardCvv(String cardCvv) {
+        this.cardCvv = cardCvv;
+    }
+
+    public String getCardExpirationYear() {
+        return cardExpirationYear;
+    }
+
+    public void setCardExpirationYear(String cardExpirationYear) {
+        this.cardExpirationYear = cardExpirationYear;
+    }
+
+    public String getGetCardExpirationMonth() {
+        return getCardExpirationMonth;
+    }
+
+    public void setGetCardExpirationMonth(String getCardExpirationMonth) {
+        this.getCardExpirationMonth = getCardExpirationMonth;
+    }
 
     public String getCardName() {
         return cardName;
@@ -25,35 +47,16 @@ public class CreditCardInformation {
         this.cardType = cardType;
     }
 
-    public int getCreditCardNumber() {
+    public String getCreditCardNumber() {
         return creditCardNumber;
     }
 
-    public void setCreditCardNumber(int creditCardNumber) {
+    public void setCreditCardNumber(String creditCardNumber) {
         this.creditCardNumber = creditCardNumber;
     }
 
-    public int getCardCvv() {
-        return cardCvv;
-    }
+    private String creditCardNumber;
 
-    public void setCardCvv(int cardCvv) {
-        this.cardCvv = cardCvv;
-    }
 
-    public int getCardExpirationYear() {
-        return cardExpirationYear;
-    }
 
-    public void setCardExpirationYear(int cardExpirationYear) {
-        this.cardExpirationYear = cardExpirationYear;
-    }
-
-    public int getGetCardExpirationMonth() {
-        return getCardExpirationMonth;
-    }
-
-    public void setGetCardExpirationMonth(int getCardExpirationMonth) {
-        this.getCardExpirationMonth = getCardExpirationMonth;
-    }
 }
